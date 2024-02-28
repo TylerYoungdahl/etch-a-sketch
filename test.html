@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid of Squares</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 320px; /* Adjust this value according to your preference */
+      }
+
+      .square {
+        width: 20px; /* Adjust this value according to your preference */
+        height: 20px; /* Adjust this value according to your preference */
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const container = document.querySelector(".container");
+        const numSquares = 16 * 16;
+
+        for (let i = 0; i < numSquares; i++) {
+          const square = document.createElement("div");
+          square.classList.add("square");
+          container.appendChild(square);
+        }
+      });
+    </script>
+  </body>
+</html>
